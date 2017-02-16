@@ -9,7 +9,7 @@ function resetGuesses () {
 
 var win =1,
 	loss =1,
-	guessRemaing = 9,
+	guessRemaining = 9,
 	computer = ["a","b", "c" , "d", "e", "f", "g", "h", "i","j", "k","l", "m", "n", "o","p",
 				 "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
 	guesses= [];
@@ -32,19 +32,19 @@ if (randomWord === event.key){
 
 	if (win >= 1) {
 		idRunner("guessRemaing").textContent = "Guess Remaining: " + 9;
-		guessRemaing = 9;
+		guessRemaining = 9;
 	}
 } else {
-		guessRemaing--;
-		idRunner("guessRemaing").textContent =  "Guess Remaining:" + guessRemaing;
+		guessRemaining--;
+		idRunner("guessRemaining").textContent =  "Guess Remaining:" + guessRemaining;
 
 
-		if(guessRemaing == 0) {
+		if(guessRemaining == 0) {
 
 			idRunner("loss").textContent = "losses:" + loss++;
 
-			idRunner("guessRemaing").textContent = "Guesses left: " + 9;
-				guessRemaing = 8;
+			idRunner("guessRemaining").textContent = "Guesses left: " + 9;
+				guessRemaining = 9;
 
 			idRunner ("guesses").textContent= "Your Guesses So Far: " + [];
 
