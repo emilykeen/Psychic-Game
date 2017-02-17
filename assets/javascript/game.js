@@ -3,9 +3,6 @@ function idRunner(element){
 	return result;
 }
 
-function resetGuesses () {
-	guessRemaing = 9;
-}
 
 var win =1,
 	loss =1,
@@ -31,19 +28,19 @@ if (randomWord === event.key){
 
 
 	if (win >= 1) {
-		idRunner("guessRemaing").textContent = "Guess Remaining: " + 9;
+		idRunner("guessRemaing").textContent = "Guesses Left: " + 9;
 		guessRemaining = 9;
 	}
 } else {
 		guessRemaining--;
-		idRunner("guessRemaining").textContent =  "Guess Remaining:" + guessRemaining;
+		idRunner("guessRemaining").textContent =  "Guesses Left:" + guessRemaining;
 
 
 		if(guessRemaining == 0) {
 
-			idRunner("loss").textContent = "losses:" + loss++;
+			idRunner("loss").textContent = "Losses:" + loss++;
 
-			idRunner("guessRemaining").textContent = "Guesses left: " + 9;
+			idRunner("guessRemaining").textContent = "Guesses Left: " + 9;
 				guessRemaining = 9;
 
 			idRunner ("guesses").textContent= "Your Guesses So Far: " + [];
