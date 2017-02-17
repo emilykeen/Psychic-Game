@@ -26,12 +26,10 @@ if (randomWord === event.key){
 	idRunner("win").textContent = "Wins:" + win++;
 	idRunner ("guesses").textContent= "Your Guesses So Far: " + [];
 
-
-	if (win >= 1) {
-		idRunner("guessRemaing").textContent = "Guesses Left: " + 9;
-		guessRemaining = 9;
+	idRunner("guessRemaining").textContent = "Guesses Left: " + 9;
+				guessRemaining = 9;
 	}
-} else {
+ else {
 		guessRemaining--;
 		idRunner("guessRemaining").textContent =  "Guesses Left:" + guessRemaining;
 
